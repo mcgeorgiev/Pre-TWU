@@ -5,13 +5,13 @@ public class Triangle {
         System.out.println("*");
     }
 
-    public void drawHorizontalLine(Integer n) {
+    public void drawHorizontalLine(int n) {
         for (int i = 0; i < n; i++) {
             System.out.print("*");
         }
     }
 
-    public void drawRightTriangle(Integer n) {
+    public void drawRightTriangle(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print("*");

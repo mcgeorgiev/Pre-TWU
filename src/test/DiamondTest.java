@@ -1,21 +1,29 @@
 package test;
 import com.pretwu.Diamond;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.Before;
+import org.junit.jupiter.api.DisplayName;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DiamondTest {
     Diamond d;
 
-    @BeforeEach
-    void setUp() {
+    @Before
+    public void init() {
         d = new Diamond();
     }
 
-    @Test(expected=NullPointerException.class)
+    @Test()
     public void isosceles() {
-        assertEquals("", d.drawIsosceles(), "well");
+
+        String threeTriangle = "  *  \n *** \n*****\n";
+        assertEquals(threeTriangle, d.drawIsosceles(3));
+
+        String oneTriangle = "*\n";
+        assertEquals(oneTriangle, d.drawIsosceles(1));
     }
+
+
 }

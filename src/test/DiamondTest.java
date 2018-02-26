@@ -46,4 +46,10 @@ public class DiamondTest {
         assertEquals(fourDiamond, d.drawDiamond(4));
     }
 
+    @Test()
+    public void diamondName() {
+        String nameDiamond = "  *  \n *** \nMichael\n *** \n  *  \n";
+        assertEquals(nameDiamond, d.drawDiamondName(3, "Michael"));
+    }
+
 }

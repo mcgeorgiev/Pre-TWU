@@ -17,20 +17,33 @@ public class DiamondTest {
     }
 
     @Test()
-    public void isosceles() {
-
-        String threeTriangle = "  *  \n *** \n*****\n";
-        assertEquals(threeTriangle, d.drawIsosceles(3));
-
+    public void isoscelesOne() {
         String oneTriangle = "*\n";
         assertEquals(oneTriangle, d.drawIsosceles(1));
     }
 
     @Test()
-    public void diamond() {
+    public void isoscelesThree() {
+        String threeTriangle = "  *  \n *** \n*****\n";
+        assertEquals(threeTriangle, d.drawIsosceles(3));
+    }
+
+    @Test()
+    public void diamondThree() {
         String threeDiamond = "  *  \n *** \n*****\n *** \n  *  \n";
         assertEquals(threeDiamond, d.drawDiamond(3));
     }
 
+    @Test()
+    public void diamondOne() {
+        String oneDiamond = "*\n";
+        assertEquals(oneDiamond, d.drawDiamond(1));
+    }
+
+    @Test()
+    public void diamondFour() {
+        String fourDiamond = "   *   \n  ***  \n ***** \n*******\n ***** \n  ***  \n   *   \n";
+        assertEquals(fourDiamond, d.drawDiamond(4));
+    }
 
 }
